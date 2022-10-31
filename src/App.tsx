@@ -3,6 +3,10 @@ import './App.css';
 import {TodoItem} from "./components/TodoItem/TodoItem";
 import {Box, Button, Card, Container, FormControl, TextField, Typography} from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
+import {TodoList} from "./components/TodoList/TodoList";
+import {NavPanel} from "./components/NavPanel/NavPanel";
+import {useAppDispatch} from "./utils/hooks/redux-hooks";
+import {TodoInput} from "./components/TodoInput/TodoInput";
 
 function App() {
     return (
@@ -12,27 +16,13 @@ function App() {
                     <Card>
                         <Box px={1}>
                             <Typography variant={"h2"} mt={2} align={"center"}>Todos</Typography>
-                            <Box mb={2} sx={{display: 'flex', justifyContent: 'space-between', gap: "10px"}}>
-                                <FormControl fullWidth>
-                                    <TextField id="outlined-basic" label="New task" variant="outlined"
-                                               sx={{
-                                                   borderBottomRightRadius: 0,
-                                                   borderTopRightRadius: 0
-                                               }}/>
-                                </FormControl>
-                                <Button variant={"outlined"}>
-                                    <AddIcon/>
-                                </Button>
+                            <Box mb={1}>
+                               <TodoInput/>
                             </Box>
-                            <Box mt={1}>
-                                <TodoItem isChecked={true} label={"My first task"}/>
+                            <Box mb={1}>
+                                <NavPanel/>
                             </Box>
-                            <Box mt={1}>
-                                <TodoItem isChecked={false} label={"My second task"}/>
-                            </Box>
-                            <Box mt={1}>
-                                <TodoItem isChecked={false} label={"My third task"}/>
-                            </Box>
+                            <TodoList/>
                         </Box>
                     </Card>
                 </Box>
