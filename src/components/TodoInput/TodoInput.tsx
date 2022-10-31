@@ -31,10 +31,11 @@ export const TodoInput = () => {
                             value={value}
                             onChange={e=>setValue(e.target.value)}
                             label="New task"
+                            inputProps={{role:"todoInput"}}
                             variant="outlined"
                         />
                     </FormControl>
-                    <Button type={'submit'} variant={"outlined"}>
+                    <Button type={'submit'} role={'addButton'}variant={"outlined"}>
                         <AddIcon/>
                     </Button>
                 </Box>

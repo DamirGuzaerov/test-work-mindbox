@@ -15,6 +15,7 @@ export const NavButton = (props: Partial<NavButtonProps>) => {
     return (
         <>
             <Button
+                role={`navBtn-${filterValue}`}
                 variant={'contained'}
                 color={(filter === filterValue) ? 'success' : 'primary'}
                 onClick={switchFilter}

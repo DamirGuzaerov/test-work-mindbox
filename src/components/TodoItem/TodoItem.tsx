@@ -17,11 +17,12 @@ export const TodoItem = (props: TodoProps) => {
     }
 
     return (
-        <Card variant={"outlined"}>
+        <Card variant={"outlined"} >
             <Box p={1} sx={{display: 'flex', justifyContent: 'space-between'}}>
                 <FormControl fullWidth>
                     <FormControlLabel
                         control={<Checkbox
+                            inputProps={{role:"checkbox"}}
                             checked={isCompleted}
                             onChange={() =>
                                 switchTodo()
@@ -30,6 +31,8 @@ export const TodoItem = (props: TodoProps) => {
                         />} label={<Typography variant={"body1"}>{label}</Typography>}/>
                 </FormControl>
                 <Button
+                    role={"deleteButton"}
+                    name={`delete-btn-${id}`}
                     variant={"outlined"}
                     size={"small"}
                     color={"error"}

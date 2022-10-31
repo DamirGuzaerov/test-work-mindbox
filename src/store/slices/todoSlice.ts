@@ -9,21 +9,6 @@ export const initState: TodoListState = {
         {
             id: uuidv4(),
             label: 'My task number 1',
-            isCompleted: true
-        },
-        {
-            id: uuidv4(),
-            label: 'My task number 2',
-            isCompleted: false
-        },
-        {
-            id: uuidv4(),
-            label: 'My task number 3',
-            isCompleted: true
-        },
-        {
-            id: uuidv4(),
-            label: 'My task number 4',
             isCompleted: false
         },
     ],

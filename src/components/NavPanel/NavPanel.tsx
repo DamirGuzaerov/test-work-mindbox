@@ -20,7 +20,11 @@ export const NavPanel = () => {
                     <NavButton filterValue={Filter.NotChecked}>Not completed</NavButton>
                 </Box>
                 <Box>
-                    <Button variant={'contained'} color={'error'} onClick={clearTodos}>Clear</Button>
+                    <Button
+                        role={"clearButton"}
+                        variant={'contained'}
+                        color={'error'}
+                        onClick={clearTodos}>Clear</Button>
                 </Box>
             </Box>
         </>

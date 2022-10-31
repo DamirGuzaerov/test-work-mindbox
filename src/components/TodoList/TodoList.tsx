@@ -9,18 +9,18 @@ export const TodoList = () => {
     return (
         <>
             {filter === Filter.All && todoList.map(el => (
-                <Box mb={1}>
-                    <TodoItem key={el.id} id={el.id} isCompleted={el.isCompleted} label={el.label}/>
+                <Box key={el.id} mb={1}>
+                    <TodoItem id={el.id} isCompleted={el.isCompleted} label={el.label}/>
                 </Box>
             ))}
             {filter === Filter.Checked && todoList.filter(el => el.isCompleted).map(el => (
-                <Box mb={1}>
-                    <TodoItem key={el.id} id={el.id} isCompleted={el.isCompleted} label={el.label}/>
+                <Box key={el.id} mb={1}>
+                    <TodoItem  id={el.id} isCompleted={el.isCompleted} label={el.label}/>
                 </Box>
             ))}
             {filter === Filter.NotChecked && todoList.filter(el => !el.isCompleted).map(el => (
-                <Box mb={1}>
-                    <TodoItem key={el.id} id={el.id} isCompleted={el.isCompleted} label={el.label}/>
+                <Box key={el.id} mb={1}>
+                    <TodoItem id={el.id} isCompleted={el.isCompleted} label={el.label}/>
                 </Box>
             ))}
         </>
