@@ -2,7 +2,7 @@ import {NavButton} from "../NavButton/NavButton";
 import {Box, Button} from "@mui/material";
 import {Filter} from "../../types/types";
 import {useAppDispatch, useAppSelector} from "../../utils/hooks/redux-hooks";
-import {setTodos} from "../../store/slices/todoSlice";
+import {setTodos} from "../../store/slices/todoSlice/todoSlice";
 
 export const NavPanel = () => {
     const {todoList} = useAppSelector(state => state.TodoReducer);

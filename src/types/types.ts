@@ -10,7 +10,7 @@ export enum Filter {
 
 export interface TodoProps {
     id: string,
-    isCompleted: boolean,
+    isCompleted?: boolean,
     label: string,
 }
 

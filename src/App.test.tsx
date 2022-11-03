@@ -6,28 +6,10 @@ import {
     clearTodos,
     renderWithProviders as customRender,
     switchTodo
-} from "../utils/test-utils/test-utils"
-import App from "../App";
+} from "./utils/test-utils/test-utils"
+import App from "./App";
 import userEvent from "@testing-library/user-event";
-import {Filter} from "../types/types";
-
-test('renders all buttons', () => {
-    customRender(<App/>)
-
-    const AllNavButton = screen.getByText(/^All$/i);
-    const CompletedNavButton = screen.getByText(/^Completed$/i);
-    const NotCompletedNavButton = screen.getByText(/^Not completed$/i);
-    expect(AllNavButton).toBeInTheDocument();
-    expect(CompletedNavButton).toBeInTheDocument();
-    expect(NotCompletedNavButton).toBeInTheDocument();
-});
-
-test('renders todo input', () => {
-    customRender(<App/>)
-
-    const TodoInput = screen.getByRole("todoInput");
-    expect(TodoInput).toBeInTheDocument();
-});
+import {Filter} from "./types/types";
 
 test('todos count is correct after adding todo', () => {
     customRender(<App/>)

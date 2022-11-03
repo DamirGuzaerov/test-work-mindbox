@@ -1,7 +1,7 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {v4 as uuidv4} from 'uuid';
 
-import {Filter, TodoProps, TodoListState} from '../../types/types';
+import {Filter, TodoProps, TodoListState} from '../../../types/types';
 
 export const initState: TodoListState = {
     filter: Filter.All,
