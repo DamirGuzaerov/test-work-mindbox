@@ -1,11 +1,11 @@
 import {Box, Button, Card, Checkbox, FormControl, FormControlLabel, Typography} from "@mui/material";
 import DeleteIcon from '@mui/icons-material/Delete';
-import {switchCompleting, deleteTodo} from "../../store/slices/todoSlice";
+import {switchCompleting, deleteTodo} from "../../store/slices/todoSlice/todoSlice";
 import {useAppDispatch} from "../../utils/hooks/redux-hooks";
 import {TodoProps} from "../../types/types";
 
 export const TodoItem = (props: TodoProps) => {
-    const {label, isCompleted, id} = props
+    const {label, isCompleted = false, id} = props
     const dispatch = useAppDispatch();
 
     const switchTodo = () => {

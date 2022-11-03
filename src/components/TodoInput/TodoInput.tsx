@@ -1,8 +1,8 @@
 import {Box, Button, FormControl, TextField} from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
-import React, {FormEvent, useRef, useState} from "react";
+import React, {FormEvent, useState} from "react";
 import {useAppDispatch} from "../../utils/hooks/redux-hooks";
-import {addTodo} from "../../store/slices/todoSlice";
+import {addTodo} from "../../store/slices/todoSlice/todoSlice";
 import {TodoProps} from "../../types/types";
 import {v4 as uuidv4} from "uuid"
 

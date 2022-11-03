@@ -3,7 +3,7 @@ import {render, screen} from '@testing-library/react'
 import { Provider } from 'react-redux'
 
 import {mainStore} from "../../store/mainStore";
-import {initState} from "../../store/slices/todoSlice";
+import {initState} from "../../store/slices/todoSlice/todoSlice";
 import {ExtendedRenderOptions, Filter} from "../../types/types";
 import userEvent from "@testing-library/user-event";
 

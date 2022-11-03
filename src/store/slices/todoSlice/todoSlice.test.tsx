@@ -1,5 +1,5 @@
-import reducer, {addTodo, deleteTodo, initState, setTodos} from '../store/slices/todoSlice'
-import {Filter, TodoListState, TodoProps} from "../types/types";
+import reducer, {addTodo, deleteTodo, initState, setTodos} from './todoSlice'
+import {Filter, TodoListState, TodoProps} from "../../../types/types";
 import {v4 as uuidv4} from "uuid"
 
 test('should return the initial state', () => {
@@ -45,7 +45,6 @@ test('should handle a todo being added to an existing list', () => {
 })
 
 test('should clear if there are already elements', () => {
-
     const previousState: TodoListState = {
         filter: Filter.All,
         todoList:

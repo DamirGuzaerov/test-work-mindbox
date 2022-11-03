@@ -1,5 +1,5 @@
 import {useAppDispatch, useAppSelector} from "../../utils/hooks/redux-hooks";
-import {setFilter} from "../../store/slices/todoSlice";
+import {setFilter} from "../../store/slices/todoSlice/todoSlice";
 import {Filter, NavButtonProps} from "../../types/types";
 import {Button} from "@mui/material";
 
